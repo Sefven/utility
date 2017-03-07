@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="UTF-8">
+  <title>js session 1</title>
+
+
+
+  <script>
+   console.log('hello world !!!');
+
+   function displayTextBox() {
+    window.alert("ola people !!!");
+   }
+
+   function direBonjour(aQui) {
+    window.alert("Bonjour " + aQui)
+   }
+
+   //displayTextBox("ola people !!!")
+
+
+   direBonjour("Jerem");
+   direBonjour("Ali");
+
+
+
+   function surUneLigne(a, b) {
+    var a="c'est une belle journée"
+    var b="pour s'exercer à js!"
+
+
+
+    }
+
+
+
+   // 1  recuperer 2 parametres
+   // 2 les multiplier et recuperer le resultat dans une var
+   function multiplier(nb1, nb2) {
+    var resultat = nb1 * nb2;
+    console.log("resultat");
+    console.log(resultat);
+    // 3= tester si ce resultat est NaN
+    if (isNaN(resultat)) {
+     resultat = "une erreur de calcul est survenue... :(";
+     alert(resultat);
+    }
+    // 4 retourner le resultat
+    return resultat;
+   }
+   multiplier(2, 2);
+   multiplier(2, 3);
+   multiplier(23, "toto");
+
+
+   function afficherResultat(res) {
+    var cible = document.getElementById("res");//cette fonction afficherResult est deja programmée, on l'a directement mise
+    //cible.innerHTML += '<br>' + res;
+   }
+   //-------------------------------------------------------------------------------------------------
+   function start() {
+    var res;
+    res = multiplier(2, 2);
+    console.log(res);
+    //on affiche le resultat de la fonction afficherResultat comme ça.
+    afficherResultat(multiplier(2, 3));
+    console.log(res);
+    res = multiplier(23, "toto");
+    console.log(res);
+
+
+
+    //afficher le resultat de calculprixTTC
+    afficherResultat(calculPrixTTC(100));
+   }
+
+
+   function calculPrixTTC(prix) {
+    var taxe = 1 + (16/100);
+    console.log(taxe);
+    console.log(prix, taxe);
+    return multiplier(prix, taxe);
+   }
+
+  </script>
+ </head>
+ <body onload="start();">
+
+ </body>
+</html>
